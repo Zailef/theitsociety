@@ -1,0 +1,47 @@
+{% load wagtailcore_tags %}
+
+<div class="col m2 s12 home-future-events">
+	<div class="row">
+    <div class="col m11 s12 offset-m1 grey darken-3 content-label">
+      FUTURE EVENTS
+    </div>
+  </div>
+  <div class="row">
+    {% if page.small_future_event_1 %}
+    <a href="{% pageurl page.small_future_event_1 %}">
+    	<div class="col m11 s12 blue lighten-2 offset-m1 grid-box">
+        <h6>{{ page.small_future_event_1.name }}</h6>
+      </div>
+    </a>
+    {% else %}
+    <div class="col m11 s12 blue lighten-2 offset-m1 grid-box">
+    </div>
+    {% endif %}
+  </div>
+  <div class="row">
+    {% if page.small_future_event_2 %}
+    <a href="{% pageurl page.small_future_event_2 %}">
+    	<div class="col m11 s12 grey offset-m1 grid-box">
+        <h6>{{ page.small_future_event_2.name }}</h6>
+      </div>
+    </a>
+    {% else %}
+    <div class="col m11 s12 grey offset-m1 grid-box">
+      
+    </div>
+    {% endif %}
+  </div>
+  <div class="row">
+    {% if page.small_future_event_3 %}
+    <a href="{% pageurl page.small_future_event_3 %}">
+      <div class="col m11 s12 blue lighten-2 grid-box">
+        
+      </div>
+    </a>
+    {% else %}
+    <div class="col m11 offset-m1 s12 blue lighten-2 grid-box">
+      
+    </div>
+    {% endif %}
+  </div>
+</div>

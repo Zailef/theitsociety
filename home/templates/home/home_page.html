@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+  <div class="container outer">
+    <div class="row home-columns">
+      {% include "home/home_news.html" %}
+      {% include "home/home_past_events.html" %}
+      {% include "home/home_future_events.html" %}
+    </div>
+  </div>
+{% endblock %}
+

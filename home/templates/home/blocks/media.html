@@ -1,0 +1,8 @@
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+<div class="row">
+	{% for media_item in self.media %}
+  	{% image media_item.value fill-80x80 %}
+  {% endfor %}
+</div>

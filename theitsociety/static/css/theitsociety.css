@@ -1,0 +1,140 @@
+body, html {
+	margin: 0;
+}
+
+nav {
+  height: 100px;
+  line-height: 100px;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+  height: 100px;
+  line-height: 100px;
+}
+
+nav .button-collapse i {
+  height: 100px;
+  line-height: 100px;
+}
+
+nav .brand-logo { 
+  font-size: 1.6rem;
+  top: -10px;
+}
+
+nav ul a {
+  color: #222 !important;
+}
+
+.input-form {
+  padding-top:160px;
+}
+
+@media only screen and (min-width: 601px){
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+@media only screen and (min-width: 601px){
+  .home-news {
+    margin-right: 20px;
+  }
+}
+
+.outer {
+	margin-top: 100px;
+  min-width:84%;
+}
+
+.grid-box {
+  padding:20px !important;
+  min-height: 210px !important;
+  color: #333;
+  font-size: 12pt;
+}
+
+.home-news > .row > * > .row {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.home-past-events > * > .content-label {
+  float: right;
+  text-align: right;
+}
+
+.content-label {
+  padding: 10px 20px 10px 20px !important;
+  color: #F3F3F3;
+  font-weight: 700;
+}
+
+.card-panel {
+  margin-top: 20px;
+}
+
+.card-right {
+  text-align: left;
+}
+
+.card-panel p {
+  word-wrap: break-word;
+}
+
+.card-panel img {
+  float: left;
+  margin-right: 20px;
+}
+
+/* A load of crap that makes the profiles alternate */
+.profile-list > div:nth-child(odd) .card-panel {
+  background-color: #4fc3f7;
+}
+
+.profile-list > div:nth-child(odd) img {
+  float: right;
+  margin-left: 20px;
+}
+
+.profile-list > div:nth-child(even) .card-panel {
+  background-color: #ff8f00;
+} 
+
+.profile-list > div:nth-child(even) .col {
+  margin-left: 25%;
+} 
+
+.event {
+  border-top: 1px solid grey;
+  padding: 20px;
+}
+
+.event h3 {
+  font-size: 20pt;
+  color: #444;
+  margin: 0;
+}
+
+.event h4 {
+  font-size: 11pt;
+  color: #222;
+}
+
+.event p {
+  word-wrap: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.nav-wrapper {
+  padding-left: 128px;
+  padding-right: 128px;
+}

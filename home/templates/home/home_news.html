@@ -1,0 +1,93 @@
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+<div class="col m5 s12 home-news">
+  <div class="row">
+    <div class="col m6 s12 grey darken-3 content-label">
+      TECH NEWS &amp; SOCIETY NEWS
+    </div>
+  </div>
+  <div class="row">
+    {% if self.main_news %}
+  	<a href="{% pageurl self.main_news %}">
+  		<div class="col m12 s12 main-story amber darken-3 grid-box">
+  			<h4>{{ self.main_news.title }}</h4>
+        {{ self.main_news.body.image }}
+  		</div>
+  	</a>
+    {% else %}
+    <div class="col m12 s12 main-story amber darken-3 grid-box">
+    </div>
+    {% endif %}
+  </div>
+  <div class="row">
+    <div class="col m4 s12">
+      <div class="row">
+        {% if self.small_news_1 %}
+      	<a href="{% pageurl self.small_news_1 %}">
+      		<div class="col m11 s12 blue lighten-2 grid-box">
+      			<h6>{{ self.small_news_1.title }}</h6>
+      		</div>
+      	</a>
+        {% else %}
+        <div class="col m11 s12 blue lighten-2 grid-box">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col m4 s12">
+      <div class="row">
+        {% if self.small_news_2 %}
+      	<a href="{% pageurl self.small_news_2 %}">
+        	<div class="col m12 s12 blue lighten-2  grid-box">
+        		<h6>{{ self.small_news_2.title }}</h6>
+        	</div>
+        </a>
+        {% else %}
+        <div class="col m12 s12 blue lighten-2 grid-box">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col m4 s12">
+      <div class="row">
+        {% if self.small_news_3 %}
+        <a href="{% pageurl self.small_news_3 %}">
+          <div class="col m11 s12 blue lighten-2 offset-m1 grid-box">
+          	<h6>{{ self.small_news_3.title }}</h6>
+          </div>
+        </a>
+        {% else %}
+        <div class="col m11 s12 blue lighten-2 offset-m1 grid-box">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {% if self.med_news_1 %}
+  	<a href="{% pageurl self.med_news_1 %}">
+      <div class="col m6 s12 amber darken-3 grid-box">
+        <h5>{{ self.med_news_1.title }}</h5>
+      </div>
+    </a>
+    {% else %}
+    <div class="col m6 s12 amber darken-3 grid-box">
+    </div>
+    {% endif %}
+    <div class="col m6 s12">
+    	<div class="row">
+        {% if self.med_news_2 %}
+    		<a href="{% pageurl self.med_news_2 %}">
+          <div class="col m11 s12 grey darken-1 offset-m1 grid-box">
+          	<h5>{{ self.med_news_2.title }}</h5>
+          </div>
+        </a>
+        {% else %}
+        <div class="col m11 s12 grey darken-1 offset-m1 grid-box">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
