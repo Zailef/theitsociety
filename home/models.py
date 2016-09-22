@@ -9,23 +9,25 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailimages.blocks import ImageChooserBlock
 from wagtail.wagtailcore.blocks import StreamBlock
 
-class EventsPage(Page):
-  date = models.DateField("Post Date")
-  start = models.DateTimeField("Start Date")
-  end = models.DateTimeField("End Date")
-  name = models.CharField(max_length=100)
-  description = models.CharField(max_length=512)
-  location = models.CharField(max_length=100)
-  body = RichTextField(blank=True)
+class EventBlock(blocks.StructBlock):
+  start = blocks.DateTimeBlock()
+  end = blocks.DateTimeBlock()
+  name = blocks.CharBlock()
+  description = blocks.CharBlock()
+  location = blocks.CharBlock()
+
+  class Meta:
+    template = 'home/blocks/event.html'
+    icon = 'calendar'
+
+class EventList(Page):
+
+  events = StreamField([
+    ('event', EventBlock()),
+  ])
 
   content_panels = Page.content_panels + [
-    FieldPanel('name'),
-    FieldPanel('date'),
-    FieldPanel('start'),
-    FieldPanel('end'),
-    FieldPanel('location'),
-    FieldPanel('description'),
-    FieldPanel('body', classname="full")
+    StreamFieldPanel('events')
   ]
 
 
@@ -83,7 +85,7 @@ class HomePage(Page):
 
   # Past Events Fields
   main_past_event_1 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
@@ -91,7 +93,7 @@ class HomePage(Page):
   )
 
   med_past_event_1 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
@@ -99,7 +101,7 @@ class HomePage(Page):
   )
 
   med_past_event_2 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
@@ -107,7 +109,7 @@ class HomePage(Page):
   )
 
   main_past_event_2 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
@@ -116,7 +118,7 @@ class HomePage(Page):
 
   # Future Event Fields
   small_future_event_1 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
@@ -124,7 +126,7 @@ class HomePage(Page):
   )
 
   small_future_event_2 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
@@ -132,7 +134,7 @@ class HomePage(Page):
   )
 
   small_future_event_3 = models.ForeignKey(
-    'home.EventsPage',
+    'home.NewsArticle',
     null=True,
     blank=True,
     on_delete=models.SET_NULL,
