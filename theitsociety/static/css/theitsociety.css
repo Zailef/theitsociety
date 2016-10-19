@@ -30,6 +30,7 @@ nav ul a {
   padding-top:160px;
 }
 
+
 @media only screen and (min-width: 601px){
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 100px;
@@ -43,9 +44,21 @@ nav ul a {
   }
 }
 
-.outer {
-	margin-top: 100px;
-  min-width:84%;
+.conatiner, .outer {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-width:70vw;
+	min-height:100vh;
+}
+
+.outer img {
+	max-width:100%;
+	height:auto;
+}
+
+.articleStuff {
+	padding:5%;
 }
 
 .grid-box {
@@ -73,6 +86,8 @@ nav ul a {
 
 .card-panel {
   margin-top: 20px;
+  min-width:350px;
+  margin: 20px 30px;
 }
 
 .card-right {
@@ -86,8 +101,13 @@ nav ul a {
 .card-panel img {
   float: left;
   margin-right: 20px;
+  min-width:100%;
+  height:auto;
 }
 
+.block-profile {
+	display:inline-block;
+}
 /* A load of crap that makes the profiles alternate */
 .profile-list > div:nth-child(odd) .card-panel {
   background-color: #4fc3f7;
@@ -103,7 +123,6 @@ nav ul a {
 } 
 
 .profile-list > div:nth-child(even) .col {
-  margin-left: 25%;
 } 
 
 .event {
