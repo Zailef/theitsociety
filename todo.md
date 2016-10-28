@@ -11,4 +11,5 @@ Todo - Back End
 ===============
 
 - Update nginx/apache2 to run django back-end stuff
+- Ensure docker is working
 - Implement buddy feature 
