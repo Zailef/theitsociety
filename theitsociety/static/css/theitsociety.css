@@ -44,14 +44,30 @@ nav ul a {
   }
 }
 
-.conatiner, .outer {
+.container {
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	min-width:70vw;
-	min-height:100vh;
+	margin-top:70px;
+	flex-wrap:wrap;
+	width:100%;
+	padding-top:50px;
+}
+.profile-list {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:row;
+	flex-wrap:wrap;
+	flex-flow: row wrap;
+	align-content:flex-end;
 }
 
+.colHeader {
+	height:100px;
+	min-width:100px;
+}
 .outer img {
 	max-width:100%;
 	height:auto;
@@ -59,6 +75,50 @@ nav ul a {
 
 .articleStuff {
 	padding:5%;
+}
+
+.aboutStuff {
+	padding:5%;
+	width:600px;
+	height:100%;
+}
+
+.aboutStuff img.full-width {
+	margin: 0 auto;
+}
+
+.aboutStuff p {
+	width:auto;
+}
+
+@media screen and (max-width:601px) {
+	.aboutStuff {
+		width:100vw;
+		min-width:0px;
+	}
+}
+
+.eventList {
+	float:left;
+	width:400px;
+	min-width:400px;
+}
+
+.eventList>.block-event>.row>.col {
+	width:350px;
+	min-height:300px;
+	margin-left:0;
+	margin: 0 30px;
+}
+
+.eventCard {
+	color:rgba(255, 255, 255, 0.901961)
+}
+
+.eventCal {
+	margin-right:30px;
+	float:right;
+	top:0;
 }
 
 .grid-box {
@@ -85,9 +145,7 @@ nav ul a {
 }
 
 .card-panel {
-  margin-top: 20px;
-  min-width:350px;
-  margin: 20px 30px;
+	width:250px;
 }
 
 .card-right {
@@ -99,23 +157,22 @@ nav ul a {
 }
 
 .card-panel img {
-  float: left;
   margin-right: 20px;
   min-width:100%;
   height:auto;
 }
 
 .block-profile {
-	display:inline-block;
+	height:550px;
+	padding:20px;
 }
+
+.profile-list {
+}
+
 /* A load of crap that makes the profiles alternate */
 .profile-list > div:nth-child(odd) .card-panel {
   background-color: #4fc3f7;
-}
-
-.profile-list > div:nth-child(odd) img {
-  float: right;
-  margin-left: 20px;
 }
 
 .profile-list > div:nth-child(even) .card-panel {
