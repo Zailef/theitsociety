@@ -1,10 +1,23 @@
-<div class="row">
+<!--<div class="row">
 	<div class="col s12 m4 offset-m4 z-depth-1 grey darken-3 eventCard">
 		<h1 class="center-align">{{ self.name }}</h1>
 		<h5>
-			{{ self.start|date:"d/m/y"}} at {{self.start|time:"H:ia"}} - 
+			{{ self.start|date:"d/m/y"}} at {{self.start|time:"H:ia"}} -
 			{{ self.end|date:"d/m/y"}} at {{self.end|time:"H:ia"}}
 		</h5>
 		{{ self.description }}
+	</div>
+</div>
+-->
+
+<div class="row eventrow">
+	<div class="col s2 events grey darken-1">
+		{{ self.name }}
+	</div>
+	<div class="col s1 date grey">
+		{{ self.start|date:"d/m/20y"}}
+	</div>
+	<div class="col s1 time grey lighten-1 center ">
+		{{ self.start|time:"H:ia" }}
 	</div>
 </div>

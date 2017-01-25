@@ -15,7 +15,10 @@
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/theitsociety.css' %}">
-
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/theitsociety.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
@@ -28,10 +31,7 @@
 
         {% block content %}{% endblock %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/theitsociety.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/materialize.js' %}"></script>
+
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
