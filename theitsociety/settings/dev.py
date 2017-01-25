@@ -11,7 +11,7 @@ SECRET_KEY = 'hlox6gzg2l=l#qi1lo948s_1fjz65^mpl1z@wf=q&=se=5oe0b'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-ALLOWED_HOSTS = ['138.68.137.83', 'theitsociety.com']
+ALLOWED_HOSTS = ['138.68.137.83', 'dev.theitsociety.com']
 
 
 try:
